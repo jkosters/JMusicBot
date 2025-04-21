@@ -24,6 +24,10 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
           cache: maven
+      - name: Build with Maven 1
+        run: mvn --batch-mode --update-snapshots verify
+      - name: Rename jar 2
+        run: mv target/*-All.jar JMusicBot-0.4.3.2.jar
       - name: Set Version
         uses: datamonsters/replace-action@v2
         with:
