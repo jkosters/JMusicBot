@@ -24,10 +24,6 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
           cache: maven
-      - name: Build with Maven 1
-        run: mvn --batch-mode --update-snapshots verify
-      - name: Rename jar 2
-        run: mv target/*-All.jar JMusicBot-0.4.3.2.jar
       - name: Set Version
         uses: datamonsters/replace-action@v2
         with:
@@ -38,7 +34,7 @@ jobs:
       - name: Rename jar
         run: mv target/*-All.jar JMusicBot-${{ github.event.inputs.version_number }}.jar
       - name: Upload jar
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: jar
           path: JMusicBot-${{ github.event.inputs.version_number }}.jar
@@ -49,7 +45,7 @@ jobs:
     needs: build_jar
     steps:
       - name: Download a Build Artifact
-        uses: actions/download-artifact@v3.0.0
+        uses: actions/download-artifact@v4
         with:
           name: jar
           path: .
