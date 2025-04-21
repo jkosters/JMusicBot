@@ -23,7 +23,6 @@ jobs:
         with:
           java-version: '11'
           distribution: 'adopt'
-          cache: maven
       - name: Set Version
         uses: datamonsters/replace-action@v2
         with:
