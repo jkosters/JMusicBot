@@ -31,9 +31,9 @@
             <url>https://m2.duncte123.dev/snapshots</url>
         </repository>
         <repository>
-            <id>arbjergDev</id>
-            <name>Lavalink Repository</name>
-            <url>https://maven.lavalink.dev/releases</url>
+            <id>AddWhateverIdYouWant</id>
+            <name>SameHere</name>
+            <url>https://dl.cloudsmith.io/public/arcane/archive/maven/</url>
         </repository>
     </repositories>
 
@@ -60,7 +60,7 @@
         <dependency>
             <groupId>dev.lavalink.youtube</groupId>
             <artifactId>common</artifactId>
-            <version>1.7.0</version>
+            <version>1.11.4</version>
         </dependency>
     	<dependency>
 	        <groupId>com.github.jagrosh</groupId>
