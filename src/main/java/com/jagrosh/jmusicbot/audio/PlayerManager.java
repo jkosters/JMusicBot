@@ -19,7 +19,6 @@ import com.dunctebot.sourcemanagers.DuncteBotSources;
 import com.jagrosh.jmusicbot.Bot;
 import com.sedmelluq.discord.lavaplayer.container.MediaContainerRegistry;
 import com.sedmelluq.discord.lavaplayer.player.AudioPlayer;
-import com.sedmelluq.discord.lavaplayer.player.AudioPlayerManager;
 import com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager;
 import com.sedmelluq.discord.lavaplayer.source.AudioSourceManagers;
 import com.sedmelluq.discord.lavaplayer.source.bandcamp.BandcampAudioSourceManager;
@@ -65,7 +64,7 @@ public class PlayerManager extends DefaultAudioPlayerManager
 
         AudioSourceManagers.registerLocalSource(this);
 
-        DuncteBotSources.registerCustom(this, "en-US", 1);
+        DuncteBotSources.registerAll(this, "en-US");
     }
     
     public Bot getBot()
